@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+#forums {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forum {
+    flex-grow: 1;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 14px;
+}
+
+.topics {
+    list-style: none;
+    padding: 0;
+}
+
+.topics li {
+    margin-bottom: 5px;
+}
+
+#discussion {
+    margin-top: 20px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 14px;
+    border: 2px solid #ddd;
+}
+
+.messages {
+    list-style: none;
+    padding: 0;
+    border-radius: 14px;
+}
+
+.messages li {
+    margin-bottom: 10px;
+    border-radius: 14px;
+}
+
+#messageForm {
+    margin-top: 20px;
+    border-radius: 14px;
+}
+
+#messageInput {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 14px;
+}

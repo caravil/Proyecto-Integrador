@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <!-- Importacion Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <!-- Importacion Css Propio -->
+    <link rel="stylesheet" href="/Css/styleNavBar.css">
+    <!-- Bootstrap script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Funciones script-->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script  src="/Scripts/script.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <!-- imagen superior  -->
+            <header class="container-fluid mt-3 mb-3">
+                <div style="text-align: center">
+                    <img src="/Assets/Logosímbolo+-Universidad-de-Antioquia-horizontal.png" class="img-fluid" alt="Logo">
+                </div>
+            </header>
+        
+            <!-- Barra de navegacion  -->
+            <nav class="navbar navbar-expand-md custom-bg border-bottom" data-bs-theme="dark">
+                <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="cargarContenido('/Inicio/inicio')">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="cargarContenido('/User/profile')">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="cargarContenido('/Debates/debates')">Debates</a>
+                    </li>
+                    </ul>
+                    <button type="button" class="btn custom-button-primary" id="btnCerrar" data-destino="/Login/login.html">Cerrar sesión</button>
+                </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const messageForm = document.getElementById("messageForm");
+    const messageInput = document.getElementById("messageInput");
+    const messagesList = document.querySelector(".messages");
+
+    messageForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const messageText = messageInput.value.trim();
+
+        if (messageText !== "") {
+            // Agregar el nuevo mensaje a la lista
+            const newMessage = document.createElement("li");
+            newMessage.innerHTML = `<strong>Usuario:</strong> ${messageText}`;
+            messagesList.appendChild(newMessage);
+
+            // Limpiar el campo de entrada
+            messageInput.value = "";
+        }
+    });
+});

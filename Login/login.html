@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+  <script  src="/Scripts/scriptLogin.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/Css/styleLogin.css">
+</head>
+<body>
+
+<section class="login">
+  <h1>Iniciar sesión</h1>
+  <form id="loginForm" action="/Main/main.html">
+    <div class="inputbox">
+      <ion-icon name="mail-outline"></ion-icon>
+      <input type="email" id="email" required>
+      <label for="">Correo</label>
+    </div>
+    <div class="inputbox">
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <input type="password" id="password" required>
+      <label for="">Contraseña</label>
+    </div>
+    <div class="forget">
+      <label for="">
+        <input type="checkbox">
+        Recuérdame
+      </label>
+      <br>
+      <a href="#">Recuperar contraseña</a>
+    </div>
+    <button class="btn" data-destino="/Main/main.html">Acceder</button>
+    <button class="btn" data-toggle="modal" data-target="#registerModal">Registrarse</button>
+  </form>
+</section>
+
+<!-- Ventana Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registerModalLabel">Registro</h5>
+      </div>
+      <div class="modal-body">
+        <!-- Contenido del formulario de registro -->
+        <form id="registerForm" action="/Main/main.html">
+          <div class="inputbox">
+            <ion-icon name="person-outline"></ion-icon>
+            <input type="text" id="username" required>
+            <label for="username">Nombre de usuario</label>
+          </div>
+          <div class="inputbox">
+            <ion-icon name="mail-outline"></ion-icon>
+            <input type="email" id="email" required>
+            <label for="email">Correo</label>
+          </div>
+          <div class="inputbox">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" id="password" required>
+            <label for="password">Contraseña</label>
+          </div>
+          <!-- Otros campos de registro según sea necesario -->
+          <button class="btn" type="submit">Registrarse</button>
+          <button class="btn" class="close"  aria-label="Close" data-dismiss="modal">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JavaScript y dependencias jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
